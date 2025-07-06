@@ -101,7 +101,7 @@ edison.soto@epn.edu.ec
 #+CAPTION: Tipos de memorias semiconductoras.
 #+NAME: fig:DramySram
 #+attr_latex: :width 0.80\textwidth
-[[file:DramySram.png]]
+[[./imagenes/DramySram.png]]
   
 ** DRAM RAM dinámica
 Es una memoria volátil que almacena bits como cargas eléctricas en condensadores, sin embargo esta carga se pierde con el tiempo, así que la memoria necesita refrescarse constantemente (volver a guardar los datos muchas veces por segundo).
@@ -113,7 +113,7 @@ Cada celda de DRAM guarda un solo bit (0 o 1). Está formada por:
   
 #+CAPTION: Celda de RAM dinámica.
 #+attr_latex: :width 0.21\textwidth
-[[file:Dram1.png]]
+[[./imagenes/Dram1.png]]
 
 ** Escritura y lectura (funcionamiento)
 
@@ -129,7 +129,7 @@ Cada celda de DRAM guarda un solo bit (0 o 1). Está formada por:
   
 #+CAPTION: Una celda de DRAM es como un vaso con agua. Si está lleno, es un 1; si está vacío, es un 0. Pero el agua se evapora sola, así que hay que estar rellenando el vaso todo el tiempo.
 #+attr_latex: :width 0.30\textwidth
-[[file:EjemploAgua.png]]
+[[./imagenes/EjemploAgua.png]]
 
 ** SRAM RAM estática
 
@@ -143,7 +143,7 @@ Cada celda de SRAM usa **6 transistores**:
 
 #+CAPTION: Celda de RAM estática.
 #+attr_latex: :width 0.25\textwidth
-[[file:Sram1.png]]
+[[./imagenes/Sram1.png]]
 
 ** Operaciones de lectura y escritura
 
@@ -165,7 +165,7 @@ Cada celda de SRAM usa **6 transistores**:
 
 #+CAPTION: Una celda de SRAM es como un interruptor de luz: si está en ON (1), se queda así hasta que alguien lo cambie. No se apaga solo como en DRAM.
 #+attr_latex: :width 0.30\textwidth
-[[file:Luz.png]]
+[[./imagenes/Luz.png]]
   
 ** Resumen
 
@@ -174,7 +174,7 @@ Ambas son necesarias para optimizar velocidad y costo en los sistemas modernos.
 
 #+CAPTION: Imagen de SRAM Y DRAM.
 #+attr_latex: :width 0.50\textwidth
-[[file:DRAMYSRAM2.png]]
+[[./imagenes/DRAMYSRAM2.png]]
 
 ** Tipos de ROM
 ** Chip de Memoria RAM
