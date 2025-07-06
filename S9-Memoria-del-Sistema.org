@@ -18,7 +18,7 @@
 #+creator: Emacs 27.1 (Org mode 9.3)
 #+cite_export: biblatex
 
-#+bibliography: ./FormatoTareas/bibliography.bib
+#+bibliography: bibliography.bib
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[spanish]{babel}
