@@ -10,8 +10,8 @@
 
 #+title: S9-Memoria-del-Sistema
 #+date: 
-#+author: Lenin G. Falconí, Richard Dawkins, Jean LeCunn
-#+email: lenin.falconi@epn.edu.ec, richard.dawkins@anotheremail.com, lecunn@meta.com
+#+author: Andrés Mendieta, David Jácome
+#+email: andres.mendieta@epn.edu.ec, 
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
