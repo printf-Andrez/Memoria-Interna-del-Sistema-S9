@@ -32,7 +32,7 @@
 :END:
 - Recuerde que si options: H:2, entonces: 
   - ~*~ Declara el nombre de la Sección
-  - ~**~ Declara el nombre de la diapositiva
+  - ~**~ Declara el nombre de la diapositiva ANDRES MENDIETA
 - Puede alterar la estructura de la diapositiva si lo considera
   necesario
 - Para este tema consulte las siguientes fuentes:
