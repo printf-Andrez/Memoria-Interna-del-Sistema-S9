@@ -88,9 +88,94 @@ edison.soto@epn.edu.ec
 ** Organización Memoria Principal Semiconductora (E3,7,172) (E3,11,201)
 - [cite:@stallings2006] página 172
 - [cite:@stallings2022computer] página 201 Capítulo 6
-** DRAM y SRAM
-** RAM dinámica
+
+** Introducción a las memorias RAM
+
+- *Definición*: Memoria de Acceso Aleatorio (Random-Access Memory).
+  - El término RAM se usa para memorias volátiles de lectura/escritura rápida.
+- *Características clave*:
+  - Volátil: Pierde datos sin alimentación eléctrica.
+  - Acceso directo: Cada celda tiene una dirección única.
+  - Operaciones eléctricas: Lectura/escritura mediante señales.
+    
+#+CAPTION: Tipos de memorias semiconductoras.
+#+NAME: fig:DramySram
+#+attr_latex: :width 0.80\textwidth
+[[file:DramySram.png]]
+  
+** DRAM RAM dinámica
+Es una memoria volátil que almacena bits como cargas eléctricas en condensadores, sin embargo esta carga se pierde con el tiempo, así que la memoria necesita refrescarse constantemente (volver a guardar los datos muchas veces por segundo).
+
+*** Cómo funciona una celda de DRAM
+Cada celda de DRAM guarda un solo bit (0 o 1). Está formada por:
+- Un **transistor**, que actúa como interruptor.
+- Un **condensador**, que almacena la carga eléctrica (1 = lleno, 0 = vacío).
+  
+#+CAPTION: Celda de RAM dinámica.
+#+attr_latex: :width 0.21\textwidth
+[[file:Dram1.png]]
+
+** Escritura y lectura (funcionamiento)
+
+- **Escritura**: se aplica un voltaje (energía) para cargar o descargar el condensador (1 o 0).
+- **Lectura**: se revisa si el condensador tiene carga. Pero al leerlo, se borra el dato, así que hay que escribirlo de nuevo.
+  
+** Características clave de la DRAM
+- Más simple que SRAM (solo 1 transistor y 1 condensador).
+- Mayor densidad y menor costo.
+- Más lenta por el refresco constante.
+- Usada como **memoria principal del sistema**.
+- Es un dispositivo analógico: el condensador puede tener cualquier valor de carga, pero se interpreta como 0 o 1 según un valor de umbral.
+  
+#+CAPTION: Una celda de DRAM es como un vaso con agua. Si está lleno, es un 1; si está vacío, es un 0. Pero el agua se evapora sola, así que hay que estar rellenando el vaso todo el tiempo.
+#+attr_latex: :width 0.30\textwidth
+[[file:EjemploAgua.png]]
+
 ** SRAM RAM estática
+
+LA SRAM es una memoria volátil que almacena bits usando biestables (flip-flops), se mantiene los datos sin refresco mientras haya alimentación.
+
+*** Cómo funciona una celda de SRAM
+
+Cada celda de SRAM usa **6 transistores**:
+- **4 transistores internos** (T1, T2, T3, T4) forman el flip-flop, que mantiene el bit.
+- **2 transistores de acceso** (T5 y T6) conectan la celda a las líneas externas cuando se va a leer o escribir.
+
+#+CAPTION: Celda de RAM estática.
+#+attr_latex: :width 0.25\textwidth
+[[file:Sram1.png]]
+
+** Operaciones de lectura y escritura
+
+*** Escritura:
+- Se activa la línea de direcciones (T5/T6 conducen).
+- Se aplica el valor deseado en la línea B .
+- El valor contrario (complemento) se aplica en la línea B⁻ (inversa).
+- Esto fuerza al flip-flop a tomar el estado correcto (0 o 1).
+
+*** Lectura:
+- Se activa la línea de dirección (T5/T6 conducen).
+- Se lee el valor actual en la línea B.
+
+** Características de la SRAM 
+- No necesita refresco.
+- Es más rápida que la DRAM.
+- Más costosa y ocupa más espacio (más transistores).
+- Se usa como memoria caché (L1, L2, L3).
+
+#+CAPTION: Una celda de SRAM es como un interruptor de luz: si está en ON (1), se queda así hasta que alguien lo cambie. No se apaga solo como en DRAM.
+#+attr_latex: :width 0.30\textwidth
+[[file:Luz.png]]
+  
+** Resumen
+
+La SRAM es más rápida pero cara, ideal para caché. La DRAM es más densa y barata, por lo que se usa como memoria principal.
+Ambas son necesarias para optimizar velocidad y costo en los sistemas modernos.
+
+#+CAPTION: Imagen de SRAM Y DRAM.
+#+attr_latex: :width 0.50\textwidth
+[[file:DRAMYSRAM2.png]]
+
 ** Tipos de ROM
 ** Chip de Memoria RAM
 * Corrección de Errores (E4, 7, 181)(E4,11,211)
