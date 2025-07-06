@@ -10,8 +10,11 @@
 
 #+title: S9-Memoria-del-Sistema
 #+date: 
-#+author: Andrés Mendieta, David Jácome
-#+email: andres.mendieta@epn.edu.ec, 
+#+author: Kenneth Gaona, Alejandro Gaona, David Jácome, Andrés Mendieta,
+Miguel Molina, Jhon Solorzano, Edison Soto.
+#+email: kenneth.gaona@epn.edu.ec, alejandro.guanocunga@epn.edu.ec, johan.jacome01@epn.edu.ec,
+andres.mendieta@epn.edu.ec, miguel.molina@epn.edu.ec, jhon.solorzano01@epn.edu.ec,
+edison.soto@epn.edu.ec
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
