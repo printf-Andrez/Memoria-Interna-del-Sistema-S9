@@ -113,7 +113,7 @@ Cada celda de DRAM guarda un solo bit (0 o 1). Está formada por:
   
 #+CAPTION: Celda de RAM dinámica.
 #+attr_latex: :width 0.21\textwidth
-[[./Dram1.png]]
+[[file:Dram1.png]]
 
 ** Escritura y lectura (funcionamiento)
 
