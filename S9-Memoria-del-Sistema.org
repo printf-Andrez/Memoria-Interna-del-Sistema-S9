@@ -225,11 +225,82 @@ Ambas son necesarias para optimizar velocidad y costo en los sistemas modernos.
 ** Chip de Memoria RAM
 
 ------
+* Corrección de Errores (E4,7,181) (E4,11,211)
 
-* Corrección de Errores (E4, 7, 181)(E4,11,211)
-** Hard Error vs Soft Error
+** ¿Qué es la Corrección de Errores?
+La corrección de errores es un conjunto de técnicas que se utilizan en sistemas digitales para detectar y corregir errores que ocurren durante la transmisión o almacenamiento de datos.
+
+Estos errores pueden deberse a fallos eléctricos, interferencias electromagnéticas, radiación cósmica o problemas físicos en la memoria o dispositivos.
+
+** Tipos de Errores
+
+*** Hard Error (Error Duro)
+- Son errores permanentes provocados por daño físico en el hardware.
+- No pueden corregirse reiniciando el sistema o borrando la memoria.
+
+Ejemplo:
+#+begin_example
+Un chip de memoria RAM se daña físicamente y siempre devuelve datos incorrectos.
+#+end_example
+
+*** Soft Error (Error Blando)
+- Son errores temporales causados por factores externos (rayos cósmicos, ruido eléctrico).
+- No implican daño físico en el hardware.
+
+Ejemplo:
+#+begin_example
+Un bit en la memoria cambia de 0 a 1 debido a una partícula de radiación, pero el chip sigue funcionando bien.
+#+end_example
+
 ** Código de Hamming
-- Realice una explicación sencilla con ejemplo
+
+El Código de Hamming es un método de detección y corrección de errores inventado por Richard Hamming. Su versión más usada es el (7,4), donde se transmiten 7 bits: 4 de datos y 3 de paridad.
+
+Este código permite detectar y corregir errores de un solo bit.
+
+** Ejemplo del Código de Hamming (7,4)
+
+Queremos transmitir los datos: 1011
+
+Se colocan los bits de la siguiente manera:
+
+| Posición | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|----------+---+---+---+---+---+---+---|
+| Tipo     | p1| p2| d1| p3| d2| d3| d4|
+| Valor    | ? | ? | 1 | ? | 0 | 1 | 1 |
+
+*** Cálculo de bits de paridad
+
+- p1 (1,3,5,7) → 1 + 0 + 1 = 2 → Par → p1 = 0
+- p2 (2,3,6,7) → 1 + 1 + 1 = 3 → Impar → p2 = 1
+- p3 (4,5,6,7) → 0 + 1 + 1 = 2 → Par → p3 = 0
+
+Mensaje a enviar:
+#+begin_example
+0 1 1 0 0 1 1
+#+end_example
+
+*** Supongamos que se daña un bit...
+
+Se recibe: 0 1 0 0 0 1 1 (el bit 3 fue alterado)
+
+Verificamos:
+
+- p1 (1,3,5,7) → 0+0+0+1 = 1 → Error
+- p2 (2,3,6,7) → 1+0+1+1 = 3 → Error
+- p3 (4,5,6,7) → 0+0+1+1 = 2 → Correcto
+
+Bits de error: p3 p2 p1 = 0 1 1 → posición 3
+
+→ Corregimos el bit 3 cambiando 0 a 1
+
+** Conclusión
+
+- Los *hard errors* son daños físicos irreparables; los *soft errors* son temporales y corregibles.
+- El Código de Hamming es eficaz para detectar y corregir errores de 1 bit.
+- Utiliza bits de paridad colocados estratégicamente para determinar la posición exacta del error.
+
+------
 * Organización Avanzada de Memorias RAM (E5, 7, 187)(E5,11,216)
 ** Dram síncrona
 ** DDR SDRAM
