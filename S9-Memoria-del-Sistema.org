@@ -224,7 +224,50 @@ Ambas son necesarias para optimizar velocidad y costo en los sistemas modernos.
 
 ** Chip de Memoria RAM
 
-------
+
+Un chip de memoria RAM es un circuito integrado que contiene una matriz de celdas para almacenar bits. Se organiza física y lógicamente para permitir leer y escribir datos.
+
+
+*** Organización interna
+
+- El chip contiene matrices de celdas conectadas por filas (líneas horizontales) y columnas (líneas verticales).
+    - Ejemplo: una DRAM de 16 Mb puede tener 4 matrices de 2048 x 2048 celdas.
+- Cada celda almacena un bit, que puede ser leído o escrito usando señales eléctricas.
+- Las filas y columnas se seleccionan mediante señales llamadas líneas de dirección (A0, A1, ..., A10).
+
+** Encapsulado del chip
+
+- El chip viene montado en una cápsula con terminales o patillas.
+  
+- Ejemplo: Un chip de DRAM de 16 Mb puede tener:
+  - 11 líneas de dirección
+  - 4 líneas de datos (lectura y escritura)
+  - Señales RAS, CAS, WE, OE
+      -RAS, CAS para direccionamiento.
+      -WE, OE para operaciones.
+  - Tensión de alimentación (Vcc), tierra (Vss)
+
+ -Ejemplo: Un chip de EPROM de 8 Mb puede tener:
+  -(A0-A19, D0-D7, CE, Vpp)
+
+#+CAPTION: Chips de encapsulamiento de memoria de EPROM y DRAM.
+#+attr_latex: :width 0.50\textwidth
+[[./imagenes/Encapsulamiento.png]]
+
+** Señales y control
+
+- Se usan señales especiales para controlar el chip:
+  - **RAS** (Row Address Select): Selecciona la dirrección de fila.
+  - **CAS** (Column Address Select): Seleciona la dirrección de la columna.
+  - **WE** (Write Enable): Activa escritura.
+  - **OE** (Output Enable): Activa buffer de salida.
+- Para ahorrar terminales, se usa direccionamiento multiplexado: Primero se envía la dirección de fila, luego la de columna, usando las mismas líneas físicas.
+  
+*** Módulos de memoria 
+
+- Si un chip maneja 1 bit, se necesitan 8 chips para 8 bits (1 byte).
+- Si se necesitan más palabras o más bits por palabra, se organizan en filas y columnas de chips.
+
 * Corrección de Errores (E4,7,181) (E4,11,211)
 
 ** ¿Qué es la Corrección de Errores?
