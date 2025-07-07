@@ -250,7 +250,7 @@ Un chip de memoria RAM es un circuito integrado que contiene una matriz de celda
   - Tensión de alimentación (Vcc), tierra (Vss)
 
  -Ejemplo: Un chip de EPROM de 8 Mb puede tener:
-  -(A0-A19, D0-D7, CE, Vpp)
+  - 32 terminales: (A0-A19, D0-D7, CE, Vpp)
 
 #+CAPTION: Chips de encapsulamiento de memoria de EPROM y DRAM.
 #+attr_latex: :width 0.50\textwidth
