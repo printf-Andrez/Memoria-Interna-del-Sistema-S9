@@ -11,7 +11,7 @@
 #+title: S9-Memoria-del-Sistema
 #+date: 
 #+author: 
-Kenneth Gaona, Alejandro Gaona, David Jácome, Andrés Mendieta,
+Kenneth Gaona, Alejandro Guanocunga, David Jácome, Andrés Mendieta,
 Miguel Molina, Jhon Solorzano, Edison Soto.
 #+email: 
 kenneth.gaona@epn.edu.ec, alejandro.guanocunga@epn.edu.ec, johan.jacome01@epn.edu.ec,
