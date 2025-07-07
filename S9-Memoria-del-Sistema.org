@@ -177,7 +177,55 @@ Ambas son necesarias para optimizar velocidad y costo en los sistemas modernos.
 [[./imagenes/DRAMYSRAM2.png]]
 
 ** Tipos de ROM
+*** 1. Conceptos Clave
+    - La ROM (Read-Only Memory) es un tipo de memoria no volátil,es decir, guarda los datos aunque no tenga energía.
+
+*** 2. Clasificación de ROMs
+**** ROM Clásica
+     - El contenido se graba en fábrica, no se puede modificar.
+     - Ideal para producción masiva del mismo chip.
+**** PROM (Programmable ROM)
+     - Se puede grabar 1 vez por el usuario.
+     - Coste inicial bajo para prototipos
+     - Es útil cuando se necesitan pocas unidades personalizadas.
+
+** 3. ROMs Re-escribibles
+*** EPROM
+     - Se puede borrar con luz ultravioleta y volver a programar (cada borrado dura hasta 20 min.).
+     - Todo el chip se borra al mismo tiempo.
+
+*** EEPROM
+     - Se puede borrar y escribir electricamente (por byte).
+     - El proceso de escritura es más lento que leer.
+     - Muy útil en dispositivos que necesitan actualizaciones.  
+
+*** Memoria Flash
+     - Variante moderna de EEPROM.
+     - Se borra electricamente por bloques.
+     - Es más rápida que EPROM. (puede borrarse entre 1 o 4 segundos).
+     - No puede borrar por bytes individuales.
+     - Se usa en USB, SSD, tarjetas SD, etc.
+
+
+** 4. Comparativa Técnica
+
+#+ATTR_LATEX: :width \textwidth :font \footnotesize    
+| Tipo   | Programación | Borrado            | Velocidad | Uso típico      |   
+|--------+--------------+--------------------+-----------+-----------------+
+| ROM    | Fábrica      | No                 | -         | Firmware masivo |   
+| PROM   | 1 vez        | No                 | Medio     | Prototipos      |   
+| EPROM  | Múltiple     | UV (lento)         | Lento     | Desarrollo      |   
+| EEPROM | Byte-a-byte  | Eléctrico (byte)   | Medio     | Ajustes         |   
+| Flash  | Bloques      | Eléctrico (rápido) | Alto      | Almacenamiento  |   
+
+#+CAPTION: Tipos de Rom
+#+attr_latex: :width 0.70\textwidth
+[[./imagenes/TiposdeRom.png]]
+
 ** Chip de Memoria RAM
+
+------
+
 * Corrección de Errores (E4, 7, 181)(E4,11,211)
 ** Hard Error vs Soft Error
 ** Código de Hamming
