@@ -294,7 +294,7 @@ Bits de error: p3 p2 p1 = 0 1 1 → posición 3
 
 → Corregimos el bit 3 cambiando 0 a 1
 
-** Conclusión
+** Conclusión a las que llegamos del ejemplo propuesto
 
 - Los *hard errors* son daños físicos irreparables; los *soft errors* son temporales y corregibles.
 - El Código de Hamming es eficaz para detectar y corregir errores de 1 bit.
