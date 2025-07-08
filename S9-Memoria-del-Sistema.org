@@ -65,8 +65,43 @@ edison.soto@epn.edu.ec
 - Se ha de utilizar como base la bibliografía recomendada, pero puede
   consultar bibliografía adicional.
 * Estructura del sistema de Memoria(E1, 11, 136)
+
 ** Principio de Localidad (E1, 11, 137)
+
+- *Definición*: Fenómeno en el que los programas tienden a acceder repetidamente a un conjunto pequeño de instrucciones o datos durante intervalos cortos.
+- *Importancia*: Base del diseño de jerarquías de memoria (RAM, caché, disco), ya que permite optimizar el rendimiento del sistema.
+
+*** Tipos de localidad
+
+- *Temporal*: Si se accede a un dato o instrucción, es probable que se acceda de nuevo pronto.
+- *Espacial*: Si se accede a una dirección de memoria, es probable que se acceda a direcciones cercanas.
+
+#+CAPTION: Analogía del escritorio de Bob.
+#+NAME: fig:localidadBob
+#+attr_latex: :width 0.60\textwidth
+[[./imagenes/localidad_bob.png]]
+
+*** Ejemplos
+
+- *Bucles* → repiten instrucciones = localidad temporal.
+- *Arreglos* → datos contiguos = localidad espacial.
+
+#+CAPTION: Localidad de acceso en documentos web.
+#+NAME: fig:webAccess
+#+attr_latex: :width 0.70\textwidth
+[[./imagenes/web_localidad.png]]
+
+*** Aplicación práctica
+
+- Se aprovecha en memorias caché mediante:
+  - *Bloques grandes* (localidad espacial).
+  - *Datos recientes* (localidad temporal).
+  - *Prefetching* (traer datos antes de que se pidan).
+
 ** Características de los sistemas de Memoria (E1, 11, 142)
+
+
+
 ** Ubicación (E1)
 ** Capacidad (E1)
 ** Unidad de Transferencia (E1)
