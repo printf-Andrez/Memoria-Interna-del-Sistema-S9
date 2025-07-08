@@ -98,15 +98,72 @@ edison.soto@epn.edu.ec
   - *Prefetching* (traer datos antes de que se pidan).
 
 ** Características de los sistemas de Memoria (E1, 11, 142)
-** Ubicación (E1)
-** Capacidad (E1)
-** Unidad de Transferencia (E1)
-** Acceso secuencial (E1)
-** Acceso directo (E1)
-** Acceso aleatorio (E1)
-** Tiempo de Acceso (E1)
-** Tiempo de ciclo de memoria (E1)
+
+- Las memorias de computadora se clasifican según varias propiedades clave:
+  - *Ubicación*
+  - *Capacidad*
+  - *Unidad de transferencia*
+  - *Método de acceso*
+  - *Desempeño (tiempos y velocidad)*
+
+*** Ubicación
+
+- *Memoria interna*: Está dentro del sistema. Ejemplos:
+  - Registros, caché, memoria principal (RAM).
+- *Memoria externa*: Dispositivos periféricos de almacenamiento.
+  - Ejemplos: discos duros, SSDs, cintas.
+
+*** Capacidad
+
+- Se mide en *bytes* o *palabras*.
+- Las memorias internas tienen capacidad más baja pero son más rápidas.
+- Las externas almacenan mucho más, pero son más lentas.
+
+*** Unidad de transferencia
+
+- Es el tamaño de los datos que se leen o escriben de una vez.
+  - Puede ser una palabra, un bloque o varios bytes.
+- En RAM puede ser 32, 64 o 128 bits.
+- En discos se usan *bloques* (por ejemplo, 4 KB o más).
+
+#+CAPTION: Tipos comunes de unidades de transferencia.
+#+NAME: fig:unidadesTransferencia
+#+attr_latex: :width 0.60\textwidth
+[[./imagenes/unidad_transferencia.png]]
+
+*** Métodos de acceso
+
+- *Secuencial*:
+  - Se accede a los datos en orden.
+  - Ejemplo: cintas magnéticas.
+- *Directo*:
+  - Se va a una zona general y luego se busca el dato.
+  - Ejemplo: discos duros.
+- *Aleatorio*:
+  - Cualquier dirección se accede directamente y con el mismo tiempo.
+  - Ejemplo: RAM.
+- *Asociativo*:
+  - Se busca por contenido, no por dirección.
+  - Usado en algunas memorias caché.
+
+*** Tiempos de acceso y desempeño
+
+- *Tiempo de acceso*:
+  - Tiempo desde que se pide un dato hasta que se obtiene.
+  - En RAM suele ser constante.
+
+- *Tiempo de ciclo de memoria*:
+  - Tiempo entre dos operaciones consecutivas (lectura o escritura).
+  - Incluye el tiempo de acceso + recuperación/regeneración del dato.
+
+#+CAPTION: Relación entre acceso y ciclo de memoria.
+#+NAME: fig:tiemposMemoria
+#+attr_latex: :width 0.65\textwidth
+[[./imagenes/tiempos_memoria.png]]
+
+
 ** Jerarquía de Memoria (E1, 11,145) hasta (E1,11,150)
+
 * Memoria Cache (E2, 11, 162)
 ** Principios Básicos de las Memorias Caché (E2,11,163)(E2,7,133)
 - Realice un resumen de lo más esencial del tema
