@@ -668,12 +668,9 @@ desafíos para alcanzar un alto rendimiento radica en la interfaz entre el proce
 
 A pesar de la gran velocidad de los procesadores, la memoria DRAM tradicional, de la cual ya se conoce que
 almacena temporalmente información, presenta limitaciones tanto en su arquitectura interna, como en su capacidad
-comunicativa con el bus de memoria. Esto, en efecto, generaría un cuello de botello los cuales, para mitigarlos,
-se han implementado niveles de caché SRAM los cuales tienen mayor velocidad, puesto que no necesitan ciclos de 
-actualización constantes para mantener la información.
-
-En respuesta a toda la problemática, la industria ha desarrollado y comercializado nuevas variantes de DRAM, como
-SDRAM, DDR-DRAM y RDRAM, que ofrecen mejoras significativas en varios aspectos.
+comunicativa con el bus de memoria. Esto, en efecto, generaó un cuello de botella.En respuesta a toda la problemática,
+la industria ha desarrollado y comercializado nuevas variantes de DRAM, como SDRAM, DDR-DRAM y RDRAM, que ofrecen mejoras
+significativas en varios aspectos.
 
 #+CAPTION: RAM.
 #+attr_latex: :width 0.25\textwidth
@@ -700,30 +697,26 @@ Todo esto permite que, mientras la memoria procesa el acceso a los datos, el pro
 A razón de la constante búsqueda de mejoras en el rendimiento, aparece el DDR SDRAM el cual es una evolución del SDRAM.
 
 A diferencia del SDRAM, este duplica la velocidad efectiva de transferencia, gracias  al uso de los dos flancos de la
-señal de reloj (ascendente y descendente). Además emplea frecuencias más altas y un búfer de prefetch que prepara varios
-bits para una salida aún más rápida.
+señal de reloj (ascendente y descendente).
 
 Todos estos aumentos en la velocidad obtenidos a lo largo de las generaciones de DDR, se deben principalmente al aumento
-del tamaño del búfer de prefetch. Sin embargo, en otra generación ha aparecido el concepto de "bank group". Estos permitían
-operaciones paralelas dentro del chip y mejoran el rendimiento sin aumentar el tamaño del prefetch.
-
+del tamaño del búfer de prefetch. Sin embargo, en otra generación ha aparecido el concepto de "bank group".
 #+CAPTION: DDR SDRAM.
 #+attr_latex: :width 0.50\textwidth
 [[./imagenes/ddrsdram.jpg]]
 
 ** SDRAM VS DDR SDRAM
 
-|-------+---------------------+----------------------------+------------------+----------------------|
-|       | Frecuencia de reloj | Velocidad de transferencia | Tiempo de acceso | Número de terminales |
-|-------+---------------------+----------------------------+------------------+----------------------+
-| SDRAM |                 166 |                        1.6 |               18 |                  168 |
-| DDR   |                 200 |                        3.2 |             12.5 |                  184 | 
-|-------+---------------------+----------------------------+------------------+----------------------|
+|-------+---------------------+----------------------------|                      
+|       | Frecuencia de reloj | Velocidad de transferencia |
+|-------+---------------------+----------------------------+
+| SDRAM |                 166 |                        1.6 |
+| DDR   |                 200 |                        3.2 |
+|-------+---------------------+----------------------------|
 Tabla obtenida a partir de los datos del libro Stallings2006.
 
 ** EDRAM
-La EDRAM integra la memoria directamente en el chip del procesador o en un módulo multichip, ubicándose entre la SRAM y la
-DRAM externa en velocidad, costo y tamaño.
+La EDRAM integra la memoria directamente en el chip del procesador o en un módulo multichip.
 
 Ofrece mayor densidad que la SRAM y un acceso más rápido que la DRAM externa, gracias a su cercanía y buses más anchos. Esto
 permite construir cachés más grandes dentro del chip, mejorando el rendimiento sin depender de memorias externas.
