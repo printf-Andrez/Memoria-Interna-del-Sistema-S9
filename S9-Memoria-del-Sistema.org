@@ -275,6 +275,9 @@ Memoria más lenta, grande y barata está lejos del procesador.
 **** Impacto en Desempeño
      - LRU minimiza fallos en patrones con alta localidad temporal.
      - FIFO y Aleatorio reducen la complejidad de hardware.
+** 
+#+attr_latex: :width 0.60\textwidth
+[[./imagenes/AS1.png]]
 ** Política de escritura
 **** Write‑through
      - Cada escritura en caché se refleja inmediatamente en memoria principal.
