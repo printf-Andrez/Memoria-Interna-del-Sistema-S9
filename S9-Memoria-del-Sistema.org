@@ -257,12 +257,81 @@ Memoria más lenta, grande y barata está lejos del procesador.
 
 * Memoria Cache (E2, 11, 162)
 ** Principios Básicos de las Memorias Caché (E2,11,163)(E2,7,133)
-- Realice un resumen de lo más esencial del tema
-** Elementos de Diseño de la memoria Caché
-** Tamaño Caché
-** Función de Correspondencia (E2,11,170)(E2,7,137)
-- Se recomienda la tabla 5.3 página 170 de la 10ma edición
+- Qué es?
+  - Es una pequeña y rápida memoria construida con semiconductores (Chips).
+  - Contiene copias de datos e instrucciones frecuentes de la RAM.
+  - Ubicada cerca del CPU.
+  - No necesita muchos refrescos de energía, por lo cual el tiempo de respuesta es menor.
 
+** Principos Básicos de las Memorias Caché
+  - Posee $$  2^n $$ palabras direccionables, con una única dirección de **n** bits.
+#+ATTR_LATEX: :width=0.4\linewidth
+[[./imagenes/fig415.png]]
+** Principios Básicos de las Memorias Caché
+-- Memoria divida en un número de bloques de longitud fija, de $$ K $$ palabras por bloque,
+consta de $$ C $$ líneas de $$ K $$ palabras por cada una. 
+$$ M = 2^n / K $$ bloques de memoria.
+
+** Principios Básicos de las Memorias Caché
+
+-- Es decir, existen menos líneas de Caché que bloques de memoria.
+$$ C < M $$
+
+#+ATTR_LATEX: :width=0.5\linewidth
+[[./imagenes/fig414.png]]
+-- Tipos: Caché de Discos, Caché de pista, Caché de web.
+** Niveles de Caché
+-- **L1:** Es la más pequeña y rápida, con tamaño de 256 KB - 1 MB.
+
+-- **L2:** Un poco más grande y lenta, con tamaño de 256 KB - 8 MB.
+-- **L3:** Es la más grande y lenta, con tamño de 4MB - 50MB. 
+** Elementos de Diseño de la memoria Caché
+- Tamaño Caché
+- Función de Correspondencia
+- Algoritmo de Sustitución
+- Política de escritura
+- Tamaño de línea
+- Número de Cachés.
+** Tamaño Caché
+- Es la cantidad de datos que puede almacenar.
+
+- Factores importantes: Tasa de aciertos, latencia de acceso y costo de consumo de energía.
+- Depende del computador por lo cual no se puede predecir un tamaño óptimo.
+- Segun Stallings (2006) menciona que "Cuanto mas grande es, mayor es el número de puertas implicadas en direccionar la Caché" (p.114).
+** Función de Correspondencia (E2,11,170)(E2,7,137)
+- En consecuencia que hay menos líneas de Caché que bloques de memoría, se usa la función correspondencia,
+esto determina como se organiza la Caché.
+
+- Existen tres técnicas.
+
+** 1. Mapeo Directo
+- Es la más simple y consiste en hacer que corresponder cada bloque de memoria principal a solo una línea posible de Caché.
+
+$$ i = j  (modulo)  m $$
+Donde,
+- i: Línea de Caché
+- j: Dirección de RAM
+- m: Número de líneas en la Caché
+
+** Ejemplo 
+- Caché con **m = 8** líneas, **j = 25** Dirección de Ram,
+
+Entonces tendría   $$25 (mod) 8 = 1$$  líneas de Caché
+
+- Pensemos, Si otra dirección mapea la misma línea, surge un conflicto, ya que si se referencia repetidas veces a palabras de dos bloques diferentes estarían intercambiando continuamente en la Caché,
+con lo que la tasa de aciertos empieza a disminuir.
+
+** 2.Totalmente Asociativa
+- Es más flexible, ya que permite que cada bloque de memoria principal pueda cargarse en  cualquier línea de Caché.
+- El problema radica en la comparación de todas las líneas para buscar coincidencias, lo que exige un hardware complejo.
+
+** 3.Asociativo por conjuntos
+- Coloca la dirección de memoria como una etiqueta y un campo de palabras, con lo que debe revisar al mismo tiempo todas las etiquetas de líneas y asi encontrar una conicidencia.
+- En este caso la Caché se divide por conjuntos, en la que cada uno de ellos tiene $$k$$ líneas
+Donde,
+ $$k:$$ grado de asociación en conjuntos
+
+-Por ejemplo, una Caché con 64 líneas con $$k = 4$$, tendría $$64/4 = 16$$ conjuntos.
 
 
 ** Algoritmo de Sustitución (E2,7,148)
