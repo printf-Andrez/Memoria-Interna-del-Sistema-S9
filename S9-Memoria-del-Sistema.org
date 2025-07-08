@@ -164,6 +164,97 @@ edison.soto@epn.edu.ec
 
 ** Jerarquía de Memoria (E1, 11,145) hasta (E1,11,150)
 
+- *Objetivo*: Equilibrar tres factores clave:
+  1. ¿Cuánta memoria se necesita? (Capacidad)
+  2. ¿Qué tan rápido debe ser el acceso? (Velocidad)
+  3. ¿Cuánto puede costar? (Costo)
+
+- *Dilema del diseñador*: 
+  - Memorias rápidas son caras.
+  - Memorias grandes son lentas.
+  - ¿Solución? Usar una *jerarquía de memoria*.
+
+#+CAPTION: Relación entre costo, velocidad y tamaño en los niveles de memoria.
+#+NAME: fig:JerarquiaMemoria
+#+attr_latex: :width 0.90\textwidth
+[[./imagenes/jerarquia_memoria.png]] ;; usa aquí una imagen tipo figura 4.6
+
+*** Características de la jerarquía
+
+- A medida que bajamos de nivel:
+  - ↓ Costo por bit
+  - ↑ Capacidad
+  - ↑ Tiempo de acceso
+  - ↓ Frecuencia de acceso
+
+#+begin_quote
+Memoria más rápida, pequeña y costosa está cerca del procesador.  
+Memoria más lenta, grande y barata está lejos del procesador.
+#+end_quote
+
+*** Relaciones entre niveles (i e i+1)
+
+- Si denotamos:
+  - *Ci*: Costo por byte en nivel *i*
+  - *Ti*: Tiempo de acceso promedio
+  - *Ri*: Tasa de transferencia
+  - *Si*: Tamaño total
+
+- Entonces se cumple:
+
+  - Ci > Ci+1
+  - Ti < Ti+1
+  - Ri > Ri+1
+  - Si < Si+1
+
+*** Memorias típicas en la jerarquía
+
+#+CAPTION: Elementos típicos en la jerarquía de memoria.
+#+NAME: tab:MemoriasJerarquia
+| Nivel             | Tecnología             | Unidad de transferencia     | Gestionado por       |
+|------------------+------------------------+-----------------------------+----------------------|
+| Registros         | CMOS                   | Palabra (32 bits)           | Compilador           |
+| Caché (L1–L4)     | SRAM / eDRAM           | Bloques de caché (32 bytes) | Hardware del CPU     |
+| Memoria principal | DRAM                   | Página (1 kB)               | Sistema operativo    |
+| Secundaria        | Disco magnético        | Sector (512 bytes)          | OS / Usuario         |
+| Almacenamiento    | Cinta magnética, SSD   | Bloques grandes             | OS / Usuario         |
+
+*** Principio de localidad
+
+- *Localidad temporal*: Se accede varias veces a los mismos datos en poco tiempo.
+- *Localidad espacial*: Se accede a datos cercanos entre sí (en memoria).
+
+#+CAPTION: Aprovechamiento de la localidad en la jerarquía.
+#+NAME: fig:LocalidadJerarquia
+#+attr_latex: :width 0.80\textwidth
+[[./imagenes/localidad_transferencia.png]] ;; figura tipo 4.9
+
+- Esto permite que la mayoría de accesos se realicen en los niveles superiores.
+
+*** Ejemplo práctico
+
+- Supongamos:
+  - Nivel 1: acceso de 0.01 ms
+  - Nivel 2: acceso de 0.1 ms
+  - Nivel 1 contiene el 95% de los datos (hit ratio H = 0.95)
+
+- *Tiempo promedio de acceso*:
+
+  \( T_{prom} = (0.95 \times 0.01) + (0.05 \times (0.01 + 0.1)) = 0.015 \text{ ms} \)
+
+#+CAPTION: Tiempo promedio de acceso en función del hit ratio.
+#+NAME: fig:CurvaAcceso
+#+attr_latex: :width 0.75\textwidth
+[[./imagenes/curva_hit_ratio.png]] ;; figura tipo 4.8
+
+- Resultado: El tiempo promedio se acerca mucho al del nivel más rápido (L1).
+
+*** Conclusión
+
+- La jerarquía de memoria es fundamental para lograr buen rendimiento a bajo costo.
+- Se apoya en la *localidad* para minimizar el uso de memorias lentas.
+- La combinación de tecnologías permite sistemas eficientes y escalables.
+
 * Memoria Cache (E2, 11, 162)
 ** Principios Básicos de las Memorias Caché (E2,11,163)(E2,7,133)
 - Realice un resumen de lo más esencial del tema
