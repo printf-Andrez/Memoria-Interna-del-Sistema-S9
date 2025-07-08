@@ -297,6 +297,10 @@ Memoria más lenta, grande y barata está lejos del procesador.
      - Arquitectura del procesador y patrones de acceso típicos.
      - Balancear reducción de fallos y eficiencia de transferencia.
 
+** 
+#+attr_latex: :width 0.60\textwidth
+[[./imagenes/AS3.png]]
+
 ** Número de Cachés (E2, 7, 150)
 **** Caché L1
      - Muy rápida, pequeña (16–64 KB), integrada en el CPU.
@@ -306,7 +310,9 @@ Memoria más lenta, grande y barata está lejos del procesador.
      - Compartida entre núcleos, varios MB, latencias más altas.
 **** Jerarquía
      - Cada nivel adicional reduce tasa de fallos global pero añade complejidad de coherencia y coste.
-
+** 
+#+attr_latex: :width 0.60\textwidth
+[[./imagenes/AS4.jpg]]
 
 
 * Memoria Interna (E3,7,172)(E3,11,201)
