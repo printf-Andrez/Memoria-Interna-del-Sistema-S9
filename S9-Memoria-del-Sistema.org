@@ -347,10 +347,38 @@ Bits de error: p3 p2 p1 = 0 1 1 → posición 3
 
 ------
 * Organización Avanzada de Memorias RAM (E5, 7, 187)(E5,11,216)
+** Introducción a la Organización Avanzada de Memorias Ram
+La evolución de los sistemas computacionales ha demostradp que, a pesar de su gran efectividad, uno de los
+desafíos para alcanzar un alto rendimiento radica en la interfaz entre el procesador y la memoria principal.
+
+A pesar de la gran velocidad de los procesadores, la memoria DRAM tradicional, de la cual ya se conoce que
+almacena temporalmente información, presenta limitaciones tanto en su arquitectura interna, como en su capacidad
+comunicativa con el bus de memoria. Esto, en efecto, generaría un cuello de botello los cuales, para mitigarlos,
+se han implementado niveles de caché SRAM los cuales tienen mayor velocidad, puesto que no necesitan ciclos de 
+actualización constantes para mantener la información.
+
+En respuesta a toda la problemática, la industria ha desarrollado y comercializado nuevas variantes de DRAM, como
+SDRAM, DDR-DRAM y RDRAM, que ofrecen mejoras significativas en varios aspectos.
+
 ** Dram síncrona
+Ahora bien, la Dram síncrona, se diferencia de la tradicional puesto que permite transferencias de datos alineadas
+con la velocidad máxima que el bus proporcione entre ek procesador y la memoria. Estas transferencias de datos son
+logradas gracias a que el SDRAM opera con una señal de reloj.
+
+Todo esto permite que, mientras la memoria procesa el acceso a los datos, el procesador realice más tareas.
+
+*Principales características de la Dram síncrona*
+- Sincronización con el reloj del sistema.
+- Modo de ráfaga.
+- Arquitectura de múltiples bancos.
+- Registro de modo programable.
+
 ** DDR SDRAM
+
 ** EDRAM
+
 ** Flash Memory(E5,11,223)
+
 * Memorias no volátiles de estado solido(E5,11,226)
 ** STT-RAM
 ** PCRAM
