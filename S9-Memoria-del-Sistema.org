@@ -391,11 +391,50 @@ Todo esto permite que, mientras la memoria procesa el acceso a los datos, el pro
 - Registro de modo programable.
 
 ** DDR SDRAM
+A razón de la constante búsqueda de mejoras en el rendimiento, aparece el DDR SDRAM el cual es una evolución del SDRAM.
+
+A diferencia del SDRAM, este duplica la velocidad efectiva de transferencia, gracias  al uso de los dos flancos de la
+señal de reloj (ascendente y descendente). Además emplea frecuencias más altas y un búfer de prefetch que prepara varios
+bits para una salida aún más rápida.
+
+Todos estos aumentos en la velocidad obtenidos a lo largo de las generaciones de DDR, se deben principalmente al aumento
+del tamaño del búfer de prefetch. Sin embargo, en otra generación ha aparecido el concepto de "bank group". Estos permitían
+operaciones paralelas dentro del chip y mejoran el rendimiento sin aumentar el tamaño del prefetch.
 
 ** EDRAM
+La eDRAM integra la memoria directamente en el chip del procesador o en un módulo multichip, ubicándose entre la SRAM y la
+DRAM externa en velocidad, costo y tamaño.
+
+Ofrece mayor densidad que la SRAM y un acceso más rápido que la DRAM externa, gracias a su cercanía y buses más anchos. Esto
+permite construir cachés más grandes dentro del chip, mejorando el rendimiento sin depender de memorias externas.
+
+Su uso ha crecido en sistemas de alto rendimiento, donde se necesita mayor caché y eficiencia energética. Al consumir menos
+energía que la SRAM y permitir mayor capacidad, la eDRAM es ideal para aplicaciones exigentes.
 
 ** Flash Memory(E5,11,223)
+La memoria flash es un tipo de memoria semiconductor no volátil que se utiliza tanto para memoria interna como externa. combina
+características intermedias entre EPROM y EEPROM, usando tecnología de borrado eléctrico que permite eliminar bloques completos
+de memoria en segundos.
 
+Usa un transistor por bit con una puerta flotante que retiene o libera electrones, manteniendo los datos sin energía, lo que la
+hace útil para almacenamiento persistente.
+
+Al retener un electrón se representa el bit del "0" y al liberarlo se representa un "1".
+
+Existen dos tipos: NOR, con acceso aleatorio a nivel de bit, ideal para sistemas embebidos; y NAND, con acceso por bloques y mayor
+velocidad, utilizada en dispositivos como USB, tarjetas SD y SSDs.
 * Memorias no volátiles de estado solido(E5,11,226)
 ** STT-RAM
+Una nueva generación deL MRAM,llamada STT-RAM (Spin-Transfer Torque RAM), la cual es una memoria no volátil de alta velocidad,
+resistente al desgaste y sin consumo en reposo.
+
+Funciona con una unión de túnel magnético, donde la orientación de capas ferromagnéticas define el bit según su resistencia eléctrica.
+
+A diferencia de la MRAM clásica, usa corriente eléctrica para cambiar el estado, lo que mejora su eficiencia y escalabilidad. Por su
+rapidez y durabilidad, es una opción viable tanto para caché como para memoria principal.
+
 ** PCRAM
+Ahora bien, el PCRAM (Phase-change RAM) es una tecnología de memoria basada en materiales de aleación de calcogenuros.
+
+El almacenamiento de datos se logra gracias a la diferencia de resistencia entre dos fases del material: una fase amorfa de alta
+resistencia y una fase cristalina de baja resistencia. Mediante las operaciones de SET y RESET.
