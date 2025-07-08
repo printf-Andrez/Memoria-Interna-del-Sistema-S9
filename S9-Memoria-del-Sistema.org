@@ -345,6 +345,7 @@ Donde,
      - LRU minimiza fallos en patrones con alta localidad temporal.
      - FIFO y Aleatorio reducen la complejidad de hardware.
 ** 
+#+CAPTION: Imagen Algoritmo de Sustitución
 #+attr_latex: :width 0.60\textwidth
 [[./imagenes/AS1.png]]
 ** Política de escritura
@@ -367,6 +368,7 @@ Donde,
      - Balancear reducción de fallos y eficiencia de transferencia.
 
 ** 
+#+CAPTION: Imagen Referente Tamaño de Línea
 #+attr_latex: :width 0.60\textwidth
 [[./imagenes/AS3.png]]
 
@@ -380,6 +382,7 @@ Donde,
 **** Jerarquía
      - Cada nivel adicional reduce tasa de fallos global pero añade complejidad de coherencia y coste.
 ** 
+#+CAPTION: Imagen Números de Cachés
 #+attr_latex: :width 0.60\textwidth
 [[./imagenes/AS4.jpg]]
 
