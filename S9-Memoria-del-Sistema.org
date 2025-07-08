@@ -64,33 +64,36 @@ edison.soto@epn.edu.ec
   por los estudiantes.
 - Se ha de utilizar como base la bibliografía recomendada, pero puede
   consultar bibliografía adicional.
+
 * Estructura del sistema de Memoria(E1, 11, 136)
 ** Principio de Localidad (E1, 11, 137)
 
 - *Definición*: Fenómeno en el que los programas tienden a acceder repetidamente a un conjunto pequeño de instrucciones o datos durante intervalos cortos.
 - *Importancia*: Base del diseño de jerarquías de memoria (RAM, caché, disco), ya que permite optimizar el rendimiento del sistema.
 
-*** Tipos de localidad
+** Tipos de localidad
 
 - *Temporal*: Si se accede a un dato o instrucción, es probable que se acceda de nuevo pronto.
 - *Espacial*: Si se accede a una dirección de memoria, es probable que se acceda a direcciones cercanas.
 
+** Archivos
+
 #+CAPTION: Analogía del escritorio de Bob.
 #+NAME: fig:localidadBob
-#+attr_latex: :width 0.60\textwidth
+#+attr_latex: :width 0.30\textwidth
 [[./imagenes/carpeta.jpg]]
 
-*** Ejemplos
+** Ejemplos
 
-- *Bucles* → repiten instrucciones = localidad temporal.
-- *Arreglos* → datos contiguos = localidad espacial.
+- *Bucles*  repiten instrucciones = localidad temporal.
+- *Arreglos*  datos contiguos = localidad espacial.
 
 #+CAPTION: Localidad de acceso en documentos web.
 #+NAME: fig:webAccess
-#+attr_latex: :width 0.70\textwidth
+#+attr_latex: :width 0.60\textwidth
 [[./imagenes/documentosweb.png]]
 
-*** Aplicación práctica
+** Aplicación práctica
 
 - Se aprovecha en memorias caché mediante:
   - *Bloques grandes* (localidad espacial).
@@ -106,20 +109,20 @@ edison.soto@epn.edu.ec
   - *Método de acceso*
   - *Desempeño (tiempos y velocidad)*
 
-*** Ubicación
+** Ubicación
 
 - *Memoria interna*: Está dentro del sistema. Ejemplos:
   - Registros, caché, memoria principal (RAM).
 - *Memoria externa*: Dispositivos periféricos de almacenamiento.
   - Ejemplos: discos duros, SSDs, cintas.
 
-*** Capacidad
+** Capacidad
 
 - Se mide en *bytes* o *palabras*.
 - Las memorias internas tienen capacidad más baja pero son más rápidas.
 - Las externas almacenan mucho más, pero son más lentas.
 
-*** Unidad de transferencia
+** Unidad de transferencia
 
 - Es el tamaño de los datos que se leen o escriben de una vez.
   - Puede ser una palabra, un bloque o varios bytes.
@@ -131,7 +134,7 @@ edison.soto@epn.edu.ec
 #+attr_latex: :width 0.60\textwidth
 [[./imagenes/unidad de transferencia.png]]
 
-*** Métodos de acceso
+** Métodos de acceso
 
 - *Secuencial*:
   - Se accede a los datos en orden.
@@ -146,7 +149,7 @@ edison.soto@epn.edu.ec
   - Se busca por contenido, no por dirección.
   - Usado en algunas memorias caché.
 
-*** Tiempos de acceso y desempeño
+** Tiempos de acceso y desempeño
 
 - *Tiempo de acceso*:
   - Tiempo desde que se pide un dato hasta que se obtiene.
@@ -176,23 +179,25 @@ edison.soto@epn.edu.ec
   - Memorias grandes son lentas.
   - ¿Solución? Usar una *jerarquía de memoria*.
 
+** Piramide
+
 #+CAPTION: Relación entre costo, velocidad y tamaño en los niveles de memoria.
 #+NAME: fig:JerarquiaMemoria
 #+attr_latex: :width 0.90\textwidth
 [[./imagenes/jerarquiamemoria.jpg]]
 
-*** Características de la jerarquía
+** Características de la jerarquía
 
 - A medida que bajamos de nivel:
-  - ↓ Costo por bit
-  - ↑ Capacidad
-  - ↑ Tiempo de acceso
-  - ↓ Frecuencia de acceso
+  -  Costo por bit
+  -  Capacidad
+  -  Tiempo de acceso
+  -  Frecuencia de acceso
 
 Memoria más rápida, pequeña y costosa está cerca del procesador.  
 Memoria más lenta, grande y barata está lejos del procesador.
 
-*** Relaciones entre niveles (i e i+1)
+** Relaciones entre niveles (i e i+1)
 
 - Si denotamos:
   - *Ci*: Costo por byte en nivel *i*
@@ -207,22 +212,28 @@ Memoria más lenta, grande y barata está lejos del procesador.
   - Ri > Ri+1
   - Si < Si+1
 
-*** Memorias típicas en la jerarquía
+** Memorias típicas en la jerarquía
 
 #+CAPTION: Elementos típicos en la jerarquía de memoria.
 #+NAME: tab:MemoriasJerarquia
-| Nivel             | Tecnología             | Unidad de transferencia     | Gestionado por       |
-|------------------+------------------------+-----------------------------+----------------------|
-| Registros         | CMOS                   | Palabra (32 bits)           | Compilador           |
-| Caché (L1–L4)     | SRAM / eDRAM           | Bloques de caché (32 bytes) | Hardware del CPU     |
-| Memoria principal | DRAM                   | Página (1 kB)               | Sistema operativo    |
-| Secundaria        | Disco magnético        | Sector (512 bytes)          | OS / Usuario         |
-| Almacenamiento    | Cinta magnética, SSD   | Bloques grandes             | OS / Usuario         |
+#+ATTR_LATEX: :environment table :align p{2.3cm}|p{2.8cm}|p{3.2cm}|p{2.7cm}
+#+LATEX: \scriptsize
+| Nivel             | Tecnología           | Unidad de transf.         | Gestionado por     |
+|------------------+----------------------+----------------------------+--------------------|
+| Registros         | CMOS                 | Palabra (32 bits)          | Compilador         |
+| Caché (L1L4)      | SRAM / eDRAM         | Bloque caché (32 B)        | CPU (hardware)     |
+| Memoria principal | DRAM                 | Página (1 kB)              | S.O.               |
+| Secundaria        | Disco magnético      | Sector (512 B)             | S.O. / Usuario     |
+| Almacenamiento    | SSD, cinta magnética | Bloques grandes            | S.O. / Usuario     |
+#+LATEX: \normalsize
 
-*** Principio de localidad
+
+** Principio de localidad
 
 - *Localidad temporal*: Se accede varias veces a los mismos datos en poco tiempo.
 - *Localidad espacial*: Se accede a datos cercanos entre sí (en memoria).
+
+** Grafica
 
 #+CAPTION: Aprovechamiento de la localidad en la jerarquía.
 #+NAME: fig:LocalidadJerarquia
@@ -231,7 +242,7 @@ Memoria más lenta, grande y barata está lejos del procesador.
 
 - Esto permite que la mayoría de accesos se realicen en los niveles superiores.
 
-*** Ejemplo práctico
+** Ejemplo práctico
 
 - Supongamos:
   - Nivel 1: acceso de 0.01 ms
@@ -242,6 +253,8 @@ Memoria más lenta, grande y barata está lejos del procesador.
 
   \( T_{prom} = (0.95 \times 0.01) + (0.05 \times (0.01 + 0.1)) = 0.015 \text{ ms} \)
 
+** Diagrama
+
 #+CAPTION: Tiempo promedio de acceso en función del hit ratio.
 #+NAME: fig:CurvaAcceso
 #+attr_latex: :width 0.75\textwidth
@@ -249,11 +262,12 @@ Memoria más lenta, grande y barata está lejos del procesador.
 
 - Resultado: El tiempo promedio se acerca mucho al del nivel más rápido (L1).
 
-*** Conclusión
+** Conclusión
 
 - La jerarquía de memoria es fundamental para lograr buen rendimiento a bajo costo.
 - Se apoya en la *localidad* para minimizar el uso de memorias lentas.
 - La combinación de tecnologías permite sistemas eficientes y escalables.
+
 
 * Memoria Cache (E2, 11, 162)
 ** Principios Básicos de las Memorias Caché (E2,11,163)(E2,7,133)
