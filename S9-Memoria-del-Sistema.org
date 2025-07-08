@@ -647,7 +647,7 @@ Mensaje a enviar:
 
 Se recibe: 0 1 0 0 0 1 1 (el bit 3 fue alterado)
 
-Verificamos:
+** Verificamos:
 
 - p1 (1,3,5,7) → 0+0+0+1 = 1 → Error
 - p2 (2,3,6,7) → 1+0+1+1 = 3 → Error
