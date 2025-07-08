@@ -114,10 +114,50 @@ edison.soto@epn.edu.ec
 ** Tamaño Caché
 ** Función de Correspondencia (E2,11,170)(E2,7,137)
 - Se recomienda la tabla 5.3 página 170 de la 10ma edición
+
+
+
 ** Algoritmo de Sustitución (E2,7,148)
+**** Función
+     - Decide qué línea de caché expulsar cuando todas están ocupadas.
+**** Estrategias Principales
+     - LRU (Least Recently Used): Reemplaza la línea menos recientemente accedida.
+     - FIFO (First In, First Out): Expulsa la línea más antigua en caché.
+     - Aleatorio: Selección al azar; simple pero menos predecible.
+**** Impacto en Desempeño
+     - LRU minimiza fallos en patrones con alta localidad temporal.
+     - FIFO y Aleatorio reducen la complejidad de hardware.
 ** Política de escritura
+**** Write‑through
+     - Cada escritura en caché se refleja inmediatamente en memoria principal.
+     - Ventaja: Coherencia inmediata.
+     - Desventaja: Mayor tráfico de memoria y latencia de escritura.
+**** Write‑back
+     - Escrituras se realizan primero en caché y se diferidas a memoria principal al reemplazar línea (“dirty”).
+     - Ventaja: Menos tráfico de memoria, mejor rendimiento de escritura.
+     - Desventaja: Requiere bits “dirty” y lógica adicional para coherencia.
 ** Tamaño de Línea
+**** Definición
+     - Cantidad de bytes transferidos entre caché y memoria en cada fallo.
+**** Trade‑offs
+     - Líneas grandes: Mejor localidad espacial → menos fallos, pero posible desperdicio de ancho de banda.
+     - Líneas pequeñas: Menos datos innecesarios, pero más fallos si alta localidad espacial.
+**** Consideraciones
+     - Arquitectura del procesador y patrones de acceso típicos.
+     - Balancear reducción de fallos y eficiencia de transferencia.
+
 ** Número de Cachés (E2, 7, 150)
+**** Caché L1
+     - Muy rápida, pequeña (16–64 KB), integrada en el CPU.
+**** Caché L2
+     - Velocidad moderada, tamaño intermedio (128 KB–1 MB).
+**** Caché L3 y superiores
+     - Compartida entre núcleos, varios MB, latencias más altas.
+**** Jerarquía
+     - Cada nivel adicional reduce tasa de fallos global pero añade complejidad de coherencia y coste.
+
+
+
 * Memoria Interna (E3,7,172)(E3,11,201)
 ** Organización Memoria Principal Semiconductora (E3,7,172) (E3,11,201)
 - [cite:@stallings2006] página 172
