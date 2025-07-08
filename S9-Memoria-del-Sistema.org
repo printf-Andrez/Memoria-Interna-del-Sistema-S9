@@ -277,8 +277,7 @@ La corrección de errores es un conjunto de técnicas que se utilizan en sistema
 
 Estos errores pueden deberse a fallos eléctricos, interferencias electromagnéticas, radiación cósmica o problemas físicos en la memoria o dispositivos.
 
-[[./CorreccionErrores]]
-
+[[./imagenes/CorreccionErrores.png]]
 
 ** Tipos de Errores
 
@@ -286,7 +285,7 @@ Estos errores pueden deberse a fallos eléctricos, interferencias electromagnét
 - Son errores permanentes provocados por daño físico en el hardware.
 - No pueden corregirse reiniciando el sistema o borrando la memoria.
 
-[[./ErroresDuros]]
+[[./imagenes/ErroresDuros.png]]
 
 Ejemplo:
 #+begin_example
@@ -297,7 +296,7 @@ Un chip de memoria RAM se daña físicamente y siempre devuelve datos incorrecto
 - Son errores temporales causados por factores externos (rayos cósmicos, ruido eléctrico).
 - No implican daño físico en el hardware.
 
-[[./ErroresSuaves]]
+[[./imagenes/ErroresSuaves.png]]
 
 
 Ejemplo:
@@ -311,7 +310,7 @@ El Código de Hamming es un método de detección y corrección de errores inven
 
 Este código permite detectar y corregir errores de un solo bit.
 
-[[./CodigoHamming]]
+[[./imagenes/CodigoHamming.png]]
 
 ** Ejemplo del Código de Hamming (7,4)
 
