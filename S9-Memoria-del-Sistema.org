@@ -78,7 +78,7 @@ edison.soto@epn.edu.ec
 #+CAPTION: Analogía del escritorio de Bob.
 #+NAME: fig:localidadBob
 #+attr_latex: :width 0.60\textwidth
-[[./imagenes/escritoriobob.png]]
+[[./imagenes/carpeta.jpg]]
 
 *** Ejemplos
 
