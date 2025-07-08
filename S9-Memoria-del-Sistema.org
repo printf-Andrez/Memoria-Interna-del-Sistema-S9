@@ -277,11 +277,19 @@ La corrección de errores es un conjunto de técnicas que se utilizan en sistema
 
 Estos errores pueden deberse a fallos eléctricos, interferencias electromagnéticas, radiación cósmica o problemas físicos en la memoria o dispositivos.
 
+#+CAPTION: imagen Correcion de errores
+#+attr_latex: :width 0.25\textwidth
+[[./imagenes/CorreccionErrores.png]]
+
 ** Tipos de Errores
 
 *** Hard Error (Error Duro)
 - Son errores permanentes provocados por daño físico en el hardware.
 - No pueden corregirse reiniciando el sistema o borrando la memoria.
+
+#+CAPTION: imagen Errores Duros
+#+attr_latex: :width 0.25\textwidth  
+[[./imagenes/ErroresDuros.png]]
 
 Ejemplo:
 #+begin_example
@@ -291,6 +299,11 @@ Un chip de memoria RAM se daña físicamente y siempre devuelve datos incorrecto
 *** Soft Error (Error Blando)
 - Son errores temporales causados por factores externos (rayos cósmicos, ruido eléctrico).
 - No implican daño físico en el hardware.
+
+#+CAPTION: imagen Errores Suaves
+#+attr_latex: :width 0.25\textwidth  
+[[./imagenes/ErroresSuaves.png]]
+
 
 Ejemplo:
 #+begin_example
@@ -302,6 +315,10 @@ Un bit en la memoria cambia de 0 a 1 debido a una partícula de radiación, pero
 El Código de Hamming es un método de detección y corrección de errores inventado por Richard Hamming. Su versión más usada es el (7,4), donde se transmiten 7 bits: 4 de datos y 3 de paridad.
 
 Este código permite detectar y corregir errores de un solo bit.
+
+#+CAPTION: imagen Codigohamming
+#+attr_latex: :width 0.25\textwidth
+[[./imagenes/CodigoHamming.png]]
 
 ** Ejemplo del Código de Hamming (7,4)
 
