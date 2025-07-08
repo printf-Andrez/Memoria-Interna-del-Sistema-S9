@@ -331,7 +331,7 @@ con lo que la tasa de aciertos empieza a disminuir.
 Donde,
  $$k:$$ grado de asociación en conjuntos
 
--Por ejemplo, una Caché con 64 líneas con $$k = 4$$, tendría $$64/4 = 16$$ conjuntos.
+- Por ejemplo, una Caché con 64 líneas con $$k = 4$$, tendría $$64/4 = 16$$ conjuntos.
 
 
 ** Algoritmo de Sustitución (E2,7,148)
