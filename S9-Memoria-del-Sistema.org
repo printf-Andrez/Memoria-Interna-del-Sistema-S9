@@ -165,11 +165,13 @@ edison.soto@epn.edu.ec
 ** Jerarquía de Memoria (E1, 11,145) hasta (E1,11,150)
 
 - *Objetivo*: Equilibrar tres factores clave:
+
   1. ¿Cuánta memoria se necesita? (Capacidad)
   2. ¿Qué tan rápido debe ser el acceso? (Velocidad)
   3. ¿Cuánto puede costar? (Costo)
 
 - *Dilema del diseñador*: 
+
   - Memorias rápidas son caras.
   - Memorias grandes son lentas.
   - ¿Solución? Usar una *jerarquía de memoria*.
@@ -187,10 +189,8 @@ edison.soto@epn.edu.ec
   - ↑ Tiempo de acceso
   - ↓ Frecuencia de acceso
 
-#+begin_quote
 Memoria más rápida, pequeña y costosa está cerca del procesador.  
 Memoria más lenta, grande y barata está lejos del procesador.
-#+end_quote
 
 *** Relaciones entre niveles (i e i+1)
 
