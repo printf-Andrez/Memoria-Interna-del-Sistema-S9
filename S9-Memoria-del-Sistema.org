@@ -179,7 +179,7 @@ edison.soto@epn.edu.ec
 #+CAPTION: Relación entre costo, velocidad y tamaño en los niveles de memoria.
 #+NAME: fig:JerarquiaMemoria
 #+attr_latex: :width 0.90\textwidth
-[[./imagenes/jerarquia_memoria.png]]
+[[./imagenes/jerarquiamemoria.jpg]]
 
 *** Características de la jerarquía
 
@@ -227,7 +227,7 @@ Memoria más lenta, grande y barata está lejos del procesador.
 #+CAPTION: Aprovechamiento de la localidad en la jerarquía.
 #+NAME: fig:LocalidadJerarquia
 #+attr_latex: :width 0.80\textwidth
-[[./imagenes/localidad_transferencia.png]] 
+[[./imagenes/grafico.jpg]] 
 
 - Esto permite que la mayoría de accesos se realicen en los niveles superiores.
 
@@ -245,7 +245,7 @@ Memoria más lenta, grande y barata está lejos del procesador.
 #+CAPTION: Tiempo promedio de acceso en función del hit ratio.
 #+NAME: fig:CurvaAcceso
 #+attr_latex: :width 0.75\textwidth
-[[./imagenes/curva_hit_ratio.png]] 
+[[./imagenes/diagrama.jpg]] 
 
 - Resultado: El tiempo promedio se acerca mucho al del nivel más rápido (L1).
 
